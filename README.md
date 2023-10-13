@@ -2,9 +2,10 @@
 
 ## Description
 
-My motivation for this project was to make an easy way to generate logos in case I need help kickstarting any ideas for branding logos in the future!
-With this project, all I have to do is answer 4 easy questions and I have a starting point for a simple logo design to be used as is or to be modified.
-With this project, I learned how SVGs work and I was able to render code stored as template literals to fast track making SVGs.
+My motivation for making this project was to make an application to track my tasks and notes.
+I find myself writing things down constantly throughout the day so I don't forget.
+Now that I built this application, I'll have a better way to lead an efficient and organized life!
+
 
 ## Table of Contents (Optional)
 
@@ -15,17 +16,12 @@ With this project, I learned how SVGs work and I was able to render code stored 
 
 ## Installation
 
-1. Clone GitHub Repo to your local machine
-2. Run 'npm i' in your terminal in the repo directory
-3. Run 'npm start' in your terminal in the repo directory
-4. Answer the following questions in the terminal carefully
-5. Check your finished SVG LOGO in the FinishedLogo file
+1. Click on the URL to the application: [NoteBooker](https://calm-garden-78554-a0938358e7da.herokuapp.com)
 
 ## Usage
 
-![SVG circle](images/MDcircle.png)
-![SVG triangle](images/MDtriangle.png)
-![SVG square](images/MDsquare.png)
+![Home Page](images/noteBooker1.png)
+![Notes Page](images/noteBooker2.png)
 
 ## Credits
 
@@ -36,7 +32,3 @@ With this project, I learned how SVGs work and I was able to render code stored 
 [![Static Badge](https://img.shields.io/badge/Liscense-MIT-blue)](https://choosealicense.com/licenses/mit/)
 
 ---
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
