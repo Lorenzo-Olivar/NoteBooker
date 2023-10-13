@@ -1,25 +1,47 @@
 // imports
 const notes = require('express').Router();
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid'); 
 // get route to access the db/tasks.json
 notes.get('/', (req, res) => {
     console.info(`${req.method} request received for tasks`);
-    readFromFile('./db/tasks.json').then((tasks) => res.json(JSON.parse(tasks)));
+    fs.readFile('./db/tasks.json', 'utf-8', (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.json(JSON.parse(data));
+        }
+    });
   });
 // post route to add to the db/tasks.json
-notes.post('/', (req, res) => {
-    console.info(`${req.method} request received to add a task`);
-    const {title,text} = req.body;
+notes.post('/', (req,res) => {
+    console.info(`${req.method} request received to add tasks`);
+    const { title , text } = req.body;
     if (req.body) {
         const newTask = {
             title,
             text,
-        };
-        readAndAppend(newTask, './db/tasks.json');
-        alert(`Task was added successfully`)
+            id: uuidv4(),
+        }
+        fs.readFile('./db/tasks.json', 'utf-8', (err, data) => {
+            if (err) {
+                console.error(err);
+            } else {
+                const parsedData = JSON.parse(data);
+                parsedData.push(newTask);
+                fs.writeFile('./db/tasks.json', JSON.stringify(parsedData), (err) => {
+                    if (err) {
+                        console.error(err);
+                    } else {
+                        console.log('A new task has been written to tasks.json!')
+                    }
+                })
+            }
+        });
+        res.json('Task added');
     } else {
-        res.errored('Error in adding task')
-    }
-});
+        res.json('Unable to add newTask');
+    };
+})
 // export
 module.exports = notes;
