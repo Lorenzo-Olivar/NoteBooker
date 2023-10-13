@@ -29,6 +29,6 @@ Now that I built this application, I'll have a better way to lead an efficient a
 
 ## License
 
-[![Static Badge](https://img.shields.io/badge/Liscense-None-blue)](https://choosealicense.com)
+[![Static Badge](https://img.shields.io/badge/Liscense-MIT-blue)](https://choosealicense.com/liscenses/mit)
 
 ---
