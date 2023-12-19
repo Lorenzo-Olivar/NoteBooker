@@ -16,7 +16,7 @@ Now that I built this application, I'll have a better way to lead an efficient a
 
 ## Installation
 
-1. Click on the URL to the application: [NoteBooker](https://calm-garden-78554-a0938358e7da.herokuapp.com)
+1. Click on the URL to the application: [NoteBooker](https://notebooker-f087a22e3a03.herokuapp.com/)
 
 ## Usage
 
